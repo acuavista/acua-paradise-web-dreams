@@ -86,14 +86,14 @@ const Index = () => {
     {
       title: "Beachfront Properties",
       description: "Wake up to the Caribbean Sea. Direct access to pristine sands and unparalleled views. Your ultimate luxury escape.",
-      image: "/images/beachfront.jpg",
+      image: "/lovable-uploads/dfea186a-c804-4729-b7b8-b620b3e6550f.png",
       price: "$200,000",
       pricePerSqFt: "$100/sf"
     },
     {
       title: "Beach Access Properties", 
       description: "Just steps from the shore. Enjoy beach living without the beachfront premium. The perfect balance of value and convenience.",
-      image: "/images/ocean-wave.jpg",
+      image: "/lovable-uploads/35a47451-3797-4487-805d-3bb0e996ba06.png",
       price: "$140,000",
       pricePerSqFt: "$70/sf",
       recommended: true
@@ -101,7 +101,7 @@ const Index = () => {
     {
       title: "Tropical Paradise Properties",
       description: "Secluded havens nestled amidst lush Colombian landscapes. Ideal for tranquil retreats and connecting with nature.",
-      image: "/images/tropical-paradise.jpg", 
+      image: "/lovable-uploads/c4d8bddf-577f-4e92-bd02-66fa7d12e802.png", 
       price: "$55,000",
       pricePerSqFt: "$27.5/sf"
     }
@@ -121,7 +121,7 @@ const Index = () => {
     {
       title: "Luxury Homes",
       description: "Premium residences with pools and upscale finishes. These sophisticated homes feature resort-style amenities, gourmet kitchens, and expansive outdoor living spaces for ultimate tropical luxury.",
-      image: "/images/luxury-pool.jpg"
+      image: "/lovable-uploads/20772993-ea2a-435b-b638-6bce808e25b0.png"
     }
   ];
 
@@ -218,10 +218,10 @@ const Index = () => {
         }}
       >
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4 animate-fade-in">
-          <h1 className="text-2xl md:text-3xl font-medium tracking-tight mb-8 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-medium tracking-tight mb-8 leading-tight">
             Get Your Own Piece of this Paradise
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-2xl md:text-4xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
             Affordable, Tropical, Caribbean Properties with Up To 90% Financing
           </p>
         </div>
@@ -275,7 +275,12 @@ const Index = () => {
                   </div>
                 )}
                 <div className="glass-card h-full overflow-hidden group-hover:scale-105 transition-transform duration-500">
-                  <div className="h-64 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
+                  <div className="h-64 relative overflow-hidden">
+                    <img
+                      src={lot.image}
+                      alt={lot.title}
+                      className="w-full h-full object-cover"
+                    />
                     <div className="absolute inset-0 bg-black/20"></div>
                     <div className="absolute bottom-4 left-4 right-4">
                       <div className="flex justify-between items-end">
@@ -320,7 +325,12 @@ const Index = () => {
                 style={{ transitionDelay: `${index * 200}ms` }}
               >
                 <div className="glass-card h-full overflow-hidden group-hover:scale-105 transition-transform duration-500">
-                  <div className="h-64 bg-gradient-to-br from-green-500 to-blue-600 relative overflow-hidden">
+                  <div className="h-64 relative overflow-hidden">
+                    <img
+                      src={house.image}
+                      alt={house.title}
+                      className="w-full h-full object-cover"
+                    />
                     <div className="absolute inset-0 bg-black/20"></div>
                   </div>
                   <div className="p-6">
@@ -371,8 +381,16 @@ const Index = () => {
       </section>
 
       {/* Why Work With Us Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
+      <section 
+        className="py-20 px-4 relative"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/lovable-uploads/dfea186a-c804-4729-b7b8-b620b3e6550f.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="max-w-6xl mx-auto animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000 relative z-10">
           <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-center mb-8">
             Your Dream, Our Commitment: The AcuaBeach Advantage
           </h2>
@@ -465,16 +483,27 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => (
+            {[
+              '/lovable-uploads/b013be26-2e13-4df7-8636-cf2511114521.png',
+              '/lovable-uploads/27901c6d-a934-433a-b001-84c373d1ea27.png',
+              '/lovable-uploads/15d336c2-74ca-4b66-8736-ce20c3858602.png',
+              '/lovable-uploads/a9b17377-c565-45d2-98c3-326004ae6ce8.png',
+              '/lovable-uploads/5555ff63-3c02-43e4-97a8-a42c369a982f.png',
+              '/lovable-uploads/d28c0ecb-d672-4228-a81e-401a0c5fcd68.png',
+              '/lovable-uploads/dfea186a-c804-4729-b7b8-b620b3e6550f.png',
+              '/lovable-uploads/35a47451-3797-4487-805d-3bb0e996ba06.png'
+            ].map((image, index) => (
               <div
-                key={item}
+                key={index}
                 className="animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000 group"
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <div className="aspect-square bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 cursor-pointer">
-                  <div className="w-full h-full bg-black/20 flex items-center justify-center">
-                    <Camera className="w-8 h-8 text-white/60" />
-                  </div>
+                <div className="aspect-square rounded-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 cursor-pointer">
+                  <img
+                    src={image}
+                    alt={`Gallery image ${index + 1}`}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             ))}
