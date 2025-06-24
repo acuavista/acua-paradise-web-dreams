@@ -160,7 +160,7 @@ const Index = () => {
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="text-2xl font-medium tracking-tight">
+            <div className="text-xl font-medium tracking-tight">
               AcuaBeach
             </div>
             
@@ -206,14 +206,23 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section ref={heroRef} id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/50 to-purple-900/50"></div>
+      <section 
+        ref={heroRef} 
+        id="home" 
+        className="min-h-screen flex items-center justify-center relative overflow-hidden"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/images/slide1.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4 animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-medium tracking-tight mb-8 leading-tight">
-            Unlock Your Tropical Paradise Dream
+          <h1 className="text-6xl md:text-8xl font-medium tracking-tight mb-8 leading-tight">
+            Get Your Own Piece of this Paradise
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Affordable Cartagena Properties with Up To 90% Financing
+            Affordable, Tropical, Caribbean Properties with Up To 90% Financing
           </p>
         </div>
       </section>
@@ -498,11 +507,11 @@ const Index = () => {
               Investment Opportunities
             </h2>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              Choose from our carefully curated selection of prime lots and building opportunities in Cartagena.
+              Choose from our carefully curated selection of prime lots in Cartagena.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {/* Premium Beachfront Lot */}
             <div className="animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
               <div className="glass-card p-6 h-full">
@@ -596,38 +605,6 @@ const Index = () => {
                 <button className="neu-button w-full">View Details & Inquire</button>
               </div>
             </div>
-
-            {/* Dream Home Lot */}
-            <div className="animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
-              <div className="glass-card p-6 h-full">
-                <h3 className="text-xl font-medium mb-2">Dream Home Lot</h3>
-                <div className="mb-4">
-                  <span className="text-lg">Costs Vary</span>
-                  <div className="text-white/60 text-sm">Starting from ~$30,000</div>
-                  <div className="text-white/60 text-sm">for Prefab Models</div>
-                </div>
-                <p className="text-white/80 mb-6">An ideal canvas for your custom-built home. We assist in building any dwelling type, tailored to your vision.</p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center text-sm">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
-                    Full architectural freedom
-                  </li>
-                  <li className="flex items-center text-sm">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
-                    Personalized investment
-                  </li>
-                  <li className="flex items-center text-sm">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
-                    Seamless construction support
-                  </li>
-                  <li className="flex items-center text-sm">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
-                    Cost-effective prefab options
-                  </li>
-                </ul>
-                <button className="neu-button w-full">View Details & Inquire</button>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -707,7 +684,6 @@ const Index = () => {
                     <option value="beachfront">Beachfront Properties</option>
                     <option value="beach-access">Beach Access Properties</option>
                     <option value="tropical">Tropical Paradise Properties</option>
-                    <option value="build-ready">Dream Home Lot</option>
                   </select>
                 </div>
               </div>
@@ -743,7 +719,6 @@ const Index = () => {
                 <li><a href="#" className="hover:text-white transition-colors">Beachfront Lots</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Beach Access Lots</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Tropical Paradise Lots</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Dream Home Lots</a></li>
               </ul>
             </div>
             <div>
