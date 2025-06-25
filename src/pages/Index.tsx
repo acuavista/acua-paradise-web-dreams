@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { ChevronDown, Menu, X, Phone, Mail, MapPin, Star, Home, Users, MessageCircle, FileText, Calendar, ArrowRight, PlayCircle, Heart, Shield, Zap, Award, TrendingUp, DollarSign, Globe, Camera } from 'lucide-react';
 
@@ -86,14 +85,14 @@ const Index = () => {
     {
       title: "Beachfront Properties",
       description: "Wake up to the Caribbean Sea. Direct access to pristine sands and unparalleled views. Your ultimate luxury escape.",
-      image: "/lovable-uploads/dfea186a-c804-4729-b7b8-b620b3e6550f.png",
+      image: "/lovable-uploads/a9b17377-c565-45d2-98c3-326004ae6ce8.png",
       price: "$200,000",
       pricePerSqFt: "$100/sf"
     },
     {
       title: "Beach Access Properties", 
       description: "Just steps from the shore. Enjoy beach living without the beachfront premium. The perfect balance of value and convenience.",
-      image: "/lovable-uploads/35a47451-3797-4487-805d-3bb0e996ba06.png",
+      image: "/lovable-uploads/5555ff63-3c02-43e4-97a8-a42c369a982f.png",
       price: "$140,000",
       pricePerSqFt: "$70/sf",
       recommended: true
@@ -101,7 +100,7 @@ const Index = () => {
     {
       title: "Tropical Paradise Properties",
       description: "Secluded havens nestled amidst lush Colombian landscapes. Ideal for tranquil retreats and connecting with nature.",
-      image: "/lovable-uploads/c4d8bddf-577f-4e92-bd02-66fa7d12e802.png", 
+      image: "/lovable-uploads/d28c0ecb-d672-4228-a81e-401a0c5fcd68.png", 
       price: "$55,000",
       pricePerSqFt: "$27.5/sf"
     }
@@ -111,17 +110,17 @@ const Index = () => {
     {
       title: "A-Frame Homes",
       description: "Modern architectural marvels that blend seamlessly with nature. These distinctive triangular homes offer stunning views and efficient use of space, perfect for those seeking contemporary tropical living.",
-      image: "/images/aframe.jpg"
+      image: "/lovable-uploads/e18db10d-ae77-430f-8492-3247cfa7ee8c.png"
     },
     {
       title: "Two-Story Homes", 
       description: "Spacious family retreats with multiple levels of luxury. These elegant homes maximize views and living space, featuring traditional Caribbean architecture with modern amenities.",
-      image: "/images/palmatree-house.jpg"
+      image: "/lovable-uploads/ff3f2c8a-caa1-4efe-a171-403f8a3fc150.png"
     },
     {
       title: "Luxury Homes",
       description: "Premium residences with pools and upscale finishes. These sophisticated homes feature resort-style amenities, gourmet kitchens, and expansive outdoor living spaces for ultimate tropical luxury.",
-      image: "/lovable-uploads/20772993-ea2a-435b-b638-6bce808e25b0.png"
+      image: "/lovable-uploads/5b6a1c4d-3411-4d3d-955c-f70875c8e2d8.png"
     }
   ];
 
@@ -152,6 +151,33 @@ const Index = () => {
     }
   ];
 
+  const blogPosts = [
+    {
+      title: "Why Cartagena is the Next Miami",
+      excerpt: "Discover why savvy investors are turning their attention to Colombia's Caribbean coast and how property values are set to skyrocket.",
+      date: "June 20, 2024",
+      category: "Investment",
+      image: "/lovable-uploads/dfea186a-c804-4729-b7b8-b620b3e6550f.png",
+      readTime: "5 min read"
+    },
+    {
+      title: "Building Your Dream A-Frame in Paradise",
+      excerpt: "From design to construction, learn everything you need to know about creating your perfect tropical retreat.",
+      date: "June 15, 2024",
+      category: "Construction",
+      image: "/lovable-uploads/e18db10d-ae77-430f-8492-3247cfa7ee8c.png",
+      readTime: "8 min read"
+    },
+    {
+      title: "90% Financing: How We Make Paradise Accessible",
+      excerpt: "Understanding our revolutionary financing model that's opening doors to tropical property ownership for everyone.",
+      date: "June 10, 2024",
+      category: "Financing",
+      image: "/lovable-uploads/35a47451-3797-4487-805d-3bb0e996ba06.png",
+      readTime: "6 min read"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white font-light">
       {/* Navigation */}
@@ -166,7 +192,7 @@ const Index = () => {
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
-              {['Home', 'Properties', 'Houses', 'Why Cartagena', 'Testimonials', 'Pricing', 'Contact'].map((item) => (
+              {['Home', 'Properties', 'Houses', 'Why Cartagena', 'Blog', 'Testimonials', 'Pricing', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
@@ -192,7 +218,7 @@ const Index = () => {
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}>
           <div className="flex flex-col pt-20 px-6 space-y-6">
-            {['Home', 'Properties', 'Houses', 'Why Cartagena', 'Testimonials', 'Pricing', 'Contact'].map((item) => (
+            {['Home', 'Properties', 'Houses', 'Why Cartagena', 'Blog', 'Testimonials', 'Pricing', 'Contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
@@ -221,9 +247,6 @@ const Index = () => {
           <h1 className="text-4xl md:text-6xl font-medium tracking-tight mb-8 leading-tight">
             Get Your Own Piece of this Paradise
           </h1>
-          <p className="text-2xl md:text-4xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Affordable, Tropical, Caribbean Properties with Up To 90% Financing
-          </p>
         </div>
       </section>
 
@@ -231,7 +254,7 @@ const Index = () => {
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
           <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-center mb-12">
-            Get your own piece of this Tropical Paradise with up to 90% Financing Today
+            We Finance Up To 90% of Your First Acquisition
           </h2>
           <div className="text-lg md:text-xl text-white/80 leading-relaxed max-w-4xl mx-auto text-center space-y-6">
             <p>
@@ -462,6 +485,59 @@ const Index = () => {
                   <p className="text-white/80 mb-4 leading-relaxed">"{testimonial.quote}"</p>
                   <div className="border-t border-white/10 pt-4">
                     <p className="text-green-400 text-sm font-medium">{testimonial.result}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Section */}
+      <section id="blog" className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
+            <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
+              Latest Insights
+            </h2>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              Stay updated with the latest trends, tips, and news from the world of tropical real estate investment.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {blogPosts.map((post, index) => (
+              <div
+                key={index}
+                className="animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000 group"
+                style={{ transitionDelay: `${index * 200}ms` }}
+              >
+                <div className="glass-card h-full overflow-hidden group-hover:scale-105 transition-transform duration-500">
+                  <div className="h-48 relative overflow-hidden">
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/20"></div>
+                    <div className="absolute top-4 left-4">
+                      <span className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm">
+                        {post.category}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-center text-white/60 text-sm mb-3">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      {post.date}
+                      <span className="mx-2">•</span>
+                      {post.readTime}
+                    </div>
+                    <h3 className="text-xl font-medium mb-3 tracking-tight">{post.title}</h3>
+                    <p className="text-white/80 mb-4 leading-relaxed">{post.excerpt}</p>
+                    <button className="text-blue-400 hover:text-blue-300 transition-colors flex items-center">
+                      Read More <ArrowRight className="w-4 h-4 ml-2" />
+                    </button>
                   </div>
                 </div>
               </div>
