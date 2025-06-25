@@ -85,14 +85,14 @@ const Index = () => {
     {
       title: "Beachfront Properties",
       description: "Wake up to the Caribbean Sea. Direct access to pristine sands and unparalleled views. Your ultimate luxury escape.",
-      image: "/lovable-uploads/a9b17377-c565-45d2-98c3-326004ae6ce8.png",
+      image: "/lovable-uploads/0acac4b7-3a44-4dff-bba2-e6bc9fd9fcf3.png",
       price: "$200,000",
       pricePerSqFt: "$100/sf"
     },
     {
       title: "Beach Access Properties", 
       description: "Just steps from the shore. Enjoy beach living without the beachfront premium. The perfect balance of value and convenience.",
-      image: "/lovable-uploads/5555ff63-3c02-43e4-97a8-a42c369a982f.png",
+      image: "/lovable-uploads/56a22ae8-3d6d-4ba7-8201-dffcf2eb9132.png",
       price: "$140,000",
       pricePerSqFt: "$70/sf",
       recommended: true
@@ -100,7 +100,7 @@ const Index = () => {
     {
       title: "Tropical Paradise Properties",
       description: "Secluded havens nestled amidst lush Colombian landscapes. Ideal for tranquil retreats and connecting with nature.",
-      image: "/lovable-uploads/d28c0ecb-d672-4228-a81e-401a0c5fcd68.png", 
+      image: "/lovable-uploads/46049fac-37d0-4492-b0c8-8141c080f816.png", 
       price: "$55,000",
       pricePerSqFt: "$27.5/sf"
     }
@@ -157,15 +157,15 @@ const Index = () => {
       excerpt: "Discover why savvy investors are turning their attention to Colombia's Caribbean coast and how property values are set to skyrocket.",
       date: "June 20, 2024",
       category: "Investment",
-      image: "/lovable-uploads/dfea186a-c804-4729-b7b8-b620b3e6550f.png",
+      image: "/lovable-uploads/224e6347-54c1-4aeb-b393-bf4c2e4418ca.png",
       readTime: "5 min read"
     },
     {
-      title: "Building Your Dream A-Frame in Paradise",
+      title: "Building Your Dream Home",
       excerpt: "From design to construction, learn everything you need to know about creating your perfect tropical retreat.",
       date: "June 15, 2024",
       category: "Construction",
-      image: "/lovable-uploads/e18db10d-ae77-430f-8492-3247cfa7ee8c.png",
+      image: "/lovable-uploads/2a62dbf5-dce4-4ff2-8977-9fcf824aaa69.png",
       readTime: "8 min read"
     },
     {
@@ -173,7 +173,7 @@ const Index = () => {
       excerpt: "Understanding our revolutionary financing model that's opening doors to tropical property ownership for everyone.",
       date: "June 10, 2024",
       category: "Financing",
-      image: "/lovable-uploads/35a47451-3797-4487-805d-3bb0e996ba06.png",
+      image: "/lovable-uploads/bdb9c6ab-5072-4565-ab27-553acc0e72b4.png",
       readTime: "6 min read"
     }
   ];
@@ -237,14 +237,14 @@ const Index = () => {
         id="home" 
         className="min-h-screen flex items-center justify-center relative overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/lovable-uploads/2e8bde97-c8d3-4902-bc1f-f93ac25425e6.png')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/lovable-uploads/2e8bde97-c8d3-4902-bc1f-f93ac25425e6.png')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
         }}
       >
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4 animate-fade-in">
-          <h1 className="text-4xl md:text-6xl font-medium tracking-tight mb-8 leading-tight">
+          <h1 className="text-2xl md:text-3xl font-medium tracking-tight mb-8 leading-tight">
             Get Your Own Piece of this Paradise
           </h1>
         </div>
@@ -407,7 +407,7 @@ const Index = () => {
       <section 
         className="py-20 px-4 relative"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/lovable-uploads/dfea186a-c804-4729-b7b8-b620b3e6550f.png')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/lovable-uploads/224e6347-54c1-4aeb-b393-bf4c2e4418ca.png')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -560,14 +560,10 @@ const Index = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              '/lovable-uploads/b013be26-2e13-4df7-8636-cf2511114521.png',
+              '/lovable-uploads/1254004b-04f3-4ebc-99fa-b75ea6ef479f.png',
               '/lovable-uploads/27901c6d-a934-433a-b001-84c373d1ea27.png',
               '/lovable-uploads/15d336c2-74ca-4b66-8736-ce20c3858602.png',
-              '/lovable-uploads/a9b17377-c565-45d2-98c3-326004ae6ce8.png',
-              '/lovable-uploads/5555ff63-3c02-43e4-97a8-a42c369a982f.png',
-              '/lovable-uploads/d28c0ecb-d672-4228-a81e-401a0c5fcd68.png',
-              '/lovable-uploads/dfea186a-c804-4729-b7b8-b620b3e6550f.png',
-              '/lovable-uploads/35a47451-3797-4487-805d-3bb0e996ba06.png'
+              '/lovable-uploads/b013be26-2e13-4df7-8636-cf2511114521.png'
             ].map((image, index) => (
               <div
                 key={index}
