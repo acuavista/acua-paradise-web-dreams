@@ -78,6 +78,13 @@ const Index = () => {
       image: "/images/testimonial5.jpg",
       quote: "Working with AcuaBeach was seamless. Their financing options made my dream of owning tropical property a reality. The lot I purchased is perfect for the vacation home I'm planning to build.",
       result: "Turned tropical property dreams into reality with easy financing"
+    },
+    {
+      name: "Carlos Mendez",
+      location: "Phoenix, Arizona",
+      image: "/images/testimonial6.jpg",
+      quote: "As a first-time international property buyer, I was nervous about the process. The AcuaBeach team made everything so easy and transparent. Now I have my own slice of Caribbean paradise that I can visit anytime or rent out for extra income.",
+      result: "First-time international buyer successfully secured rental income property"
     }
   ];
 
@@ -157,7 +164,7 @@ const Index = () => {
       excerpt: "Discover why savvy investors are turning their attention to Colombia's Caribbean coast and how property values are set to skyrocket.",
       date: "June 20, 2024",
       category: "Investment",
-      image: "/lovable-uploads/224e6347-54c1-4aeb-b393-bf4c2e4418ca.png",
+      image: "/lovable-uploads/d6c37a1e-5d79-4349-a555-4c8e072c5d4b.png",
       readTime: "5 min read"
     },
     {
@@ -173,7 +180,7 @@ const Index = () => {
       excerpt: "Understanding our revolutionary financing model that's opening doors to tropical property ownership for everyone.",
       date: "June 10, 2024",
       category: "Financing",
-      image: "/lovable-uploads/bdb9c6ab-5072-4565-ab27-553acc0e72b4.png",
+      image: "/lovable-uploads/3482fbb8-15a8-4f60-b2b6-ca36f7ff9730.png",
       readTime: "6 min read"
     }
   ];
@@ -560,10 +567,11 @@ const Index = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              '/lovable-uploads/1254004b-04f3-4ebc-99fa-b75ea6ef479f.png',
-              '/lovable-uploads/27901c6d-a934-433a-b001-84c373d1ea27.png',
-              '/lovable-uploads/15d336c2-74ca-4b66-8736-ce20c3858602.png',
-              '/lovable-uploads/b013be26-2e13-4df7-8636-cf2511114521.png'
+              '/lovable-uploads/d7afc008-a719-47d8-96d0-a99b37a71d68.png',
+              '/lovable-uploads/45d3a96e-6354-44bc-8281-c4fbba72a3a1.png',
+              '/lovable-uploads/6bcb673c-de07-4891-9269-666d3033b94f.png',
+              '/lovable-uploads/4a29844e-19ed-443d-8095-a6dc1ab4a8a5.png',
+              '/lovable-uploads/c4d8bddf-577f-4e92-bd02-66fa7d12e802.png'
             ].map((image, index) => (
               <div
                 key={index}
@@ -584,8 +592,16 @@ const Index = () => {
       </section>
 
       {/* Mission Statement Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
+      <section 
+        className="py-20 px-4 relative"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/lovable-uploads/47bc7e11-e60d-4420-a0f1-ca6075a64b96.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="max-w-6xl mx-auto animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000 relative z-10">
           <div className="glass-card p-12 text-center">
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-8">
               Our Mission: Democratizing Tropical Homeownership
