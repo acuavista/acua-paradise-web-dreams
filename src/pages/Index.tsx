@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef, useState } from 'react';
 import { ChevronDown, Menu, X, Phone, Mail, MapPin, Star, Home, Users, MessageCircle, FileText, Calendar, ArrowRight, PlayCircle, Heart, Shield, Zap, Award, TrendingUp, DollarSign, Globe, Camera } from 'lucide-react';
 
@@ -85,6 +86,13 @@ const Index = () => {
       image: "/images/testimonial6.jpg",
       quote: "As a first-time international property buyer, I was nervous about the process. The AcuaBeach team made everything so easy and transparent. Now I have my own slice of Caribbean paradise that I can visit anytime or rent out for extra income.",
       result: "First-time international buyer successfully secured rental income property"
+    },
+    {
+      name: "Lisa Park",
+      location: "Seattle, Washington",
+      image: "/images/testimonial7.jpg", 
+      quote: "After years of dreaming about a tropical getaway, AcuaBeach made it happen. The 90% financing option was a game-changer for me. Now I have my own beachfront lot where I can build my retirement home. The team was professional and supportive throughout the entire process.",
+      result: "Secured dream retirement property with innovative financing"
     }
   ];
 
@@ -172,7 +180,7 @@ const Index = () => {
       excerpt: "From design to construction, learn everything you need to know about creating your perfect tropical retreat.",
       date: "June 15, 2024",
       category: "Construction",
-      image: "/lovable-uploads/2a62dbf5-dce4-4ff2-8977-9fcf824aaa69.png",
+      image: "/lovable-uploads/bdb9c6ab-5072-4565-ab27-553acc0e72b4.png",
       readTime: "8 min read"
     },
     {
@@ -189,11 +197,11 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white font-light">
       {/* Navigation */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrollY > 50 ? 'backdrop-blur-lg bg-black/20 border-b border-white/10' : 'bg-transparent'
+        scrollY > 50 ? 'backdrop-blur-lg bg-white/90 border-b border-gray-200' : 'bg-white/80 backdrop-blur-sm'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="text-6xl font-medium tracking-tight">
+            <div className="text-6xl font-bold tracking-tight bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent drop-shadow-lg">
               AcuaBeach
             </div>
             
@@ -203,7 +211,7 @@ const Index = () => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
-                  className="text-white/80 hover:text-white transition-colors duration-200 text-sm tracking-wide"
+                  className="text-gray-800 hover:text-gray-600 transition-colors duration-200 text-sm tracking-wide font-medium"
                 >
                   {item}
                 </button>
@@ -215,13 +223,13 @@ const Index = () => {
               className="md:hidden p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? <X size={24} className="text-gray-800" /> : <Menu size={24} className="text-gray-800" />}
             </button>
           </div>
         </div>
 
         {/* Mobile Menu */}
-        <div className={`md:hidden fixed inset-y-0 right-0 w-80 bg-black/90 backdrop-blur-xl transform transition-transform duration-300 ${
+        <div className={`md:hidden fixed inset-y-0 right-0 w-80 bg-white/95 backdrop-blur-xl transform transition-transform duration-300 ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}>
           <div className="flex flex-col pt-20 px-6 space-y-6">
@@ -229,7 +237,7 @@ const Index = () => {
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
-                className="text-left text-white/80 hover:text-white transition-colors duration-200 text-lg"
+                className="text-left text-gray-800 hover:text-gray-600 transition-colors duration-200 text-lg font-medium"
               >
                 {item}
               </button>
@@ -244,14 +252,14 @@ const Index = () => {
         id="home" 
         className="min-h-screen flex items-center justify-center relative overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/lovable-uploads/2e8bde97-c8d3-4902-bc1f-f93ac25425e6.png')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('/lovable-uploads/2e8bde97-c8d3-4902-bc1f-f93ac25425e6.png')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
         }}
       >
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4 animate-fade-in">
-          <h1 className="text-2xl md:text-3xl font-medium tracking-tight mb-8 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-medium tracking-tight mb-8 leading-tight text-white drop-shadow-lg">
             Get Your Own Piece of this Paradise
           </h1>
         </div>
@@ -414,17 +422,17 @@ const Index = () => {
       <section 
         className="py-20 px-4 relative"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/lovable-uploads/224e6347-54c1-4aeb-b393-bf4c2e4418ca.png')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('/lovable-uploads/224e6347-54c1-4aeb-b393-bf4c2e4418ca.png')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
         }}
       >
         <div className="max-w-6xl mx-auto animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-center mb-8">
+          <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-center mb-8 text-white drop-shadow-lg">
             Your Dream, Our Commitment: The AcuaBeach Advantage
           </h2>
-          <p className="text-lg md:text-xl text-white/80 leading-relaxed text-center max-w-4xl mx-auto mb-12">
+          <p className="text-lg md:text-xl text-white/90 leading-relaxed text-center max-w-4xl mx-auto mb-12 drop-shadow-md">
             At AcuaBeach, we are passionately dedicated to helping the average travel enthusiast realize their dream 
             of owning a piece of tropical paradise. We stand alone in the market by offering an unprecedented up to 90% 
             financing because we own all our prime lots outright, cutting out intermediaries. Beyond acquisition, we are 
@@ -435,22 +443,22 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <Shield className="w-12 h-12 mx-auto mb-4 text-green-400" />
-              <h3 className="text-lg font-medium mb-2">90% Financing</h3>
+              <h3 className="text-lg font-medium mb-2 text-white">90% Financing</h3>
               <p className="text-white/80 text-sm">Unmatched financing options make ownership accessible</p>
             </div>
             <div className="text-center">
               <Home className="w-12 h-12 mx-auto mb-4 text-blue-400" />
-              <h3 className="text-lg font-medium mb-2">Full-Service Support</h3>
+              <h3 className="text-lg font-medium mb-2 text-white">Full-Service Support</h3>
               <p className="text-white/80 text-sm">From lot to dream home, we handle everything</p>
             </div>
             <div className="text-center">
               <Award className="w-12 h-12 mx-auto mb-4 text-purple-400" />
-              <h3 className="text-lg font-medium mb-2">Prime Locations</h3>
+              <h3 className="text-lg font-medium mb-2 text-white">Prime Locations</h3>
               <p className="text-white/80 text-sm">We own the best lots outright, no intermediaries</p>
             </div>
             <div className="text-center">
               <Zap className="w-12 h-12 mx-auto mb-4 text-yellow-400" />
-              <h3 className="text-lg font-medium mb-2">Transparent Process</h3>
+              <h3 className="text-lg font-medium mb-2 text-white">Transparent Process</h3>
               <p className="text-white/80 text-sm">Clear, honest communication every step of the way</p>
             </div>
           </div>
@@ -553,7 +561,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Gallery Section */}
+      {/* Paradise Gallery Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
@@ -567,11 +575,15 @@ const Index = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              '/lovable-uploads/d7afc008-a719-47d8-96d0-a99b37a71d68.png',
-              '/lovable-uploads/45d3a96e-6354-44bc-8281-c4fbba72a3a1.png',
-              '/lovable-uploads/6bcb673c-de07-4891-9269-666d3033b94f.png',
-              '/lovable-uploads/4a29844e-19ed-443d-8095-a6dc1ab4a8a5.png',
-              '/lovable-uploads/c4d8bddf-577f-4e92-bd02-66fa7d12e802.png'
+              '/lovable-uploads/c655066d-cf91-4a9a-a2f9-5cf5433f3693.png',
+              '/lovable-uploads/d3a6d9ed-ad8d-470d-ad75-f69b273035a2.png',
+              '/lovable-uploads/ad8a077f-6bbb-4e03-90c6-77548383c05f.png',
+              '/lovable-uploads/03ec796e-f85a-455a-a824-bb2546ecd616.png',
+              '/lovable-uploads/68f3efc7-0335-4042-b130-cff6b2fa8298.png',
+              '/lovable-uploads/06c972c6-ab0e-467a-8e5e-6db9dd33ce1e.png',
+              '/lovable-uploads/facd91d9-f361-4178-a91e-f9c693f65063.png',
+              '/lovable-uploads/06023877-fe2a-4aab-aa35-dcc9f6f6f16c.png',
+              '/lovable-uploads/5555ff63-3c02-43e4-97a8-a42c369a982f.png'
             ].map((image, index) => (
               <div
                 key={index}
@@ -595,7 +607,7 @@ const Index = () => {
       <section 
         className="py-20 px-4 relative"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/lovable-uploads/47bc7e11-e60d-4420-a0f1-ca6075a64b96.png')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/lovable-uploads/47bc7e11-e60d-4420-a0f1-ca6075a64b96.png')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
