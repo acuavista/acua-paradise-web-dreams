@@ -180,7 +180,8 @@ const Index = () => {
       date: "June 20, 2024",
       category: "Investment",
       image: "/lovable-uploads/d6c37a1e-5d79-4349-a555-4c8e072c5d4b.png",
-      readTime: "5 min read"
+      readTime: "5 min read",
+      slug: "why-cartagena-is-the-next-miami"
     },
     {
       title: "Building Your Dream Home",
@@ -188,7 +189,8 @@ const Index = () => {
       date: "June 15, 2024",
       category: "Construction",
       image: "/lovable-uploads/bdb9c6ab-5072-4565-ab27-553acc0e72b4.png",
-      readTime: "8 min read"
+      readTime: "8 min read",
+      slug: "building-your-dream-home"
     },
     {
       title: "90% Financing: How We Make Paradise Accessible",
@@ -196,9 +198,17 @@ const Index = () => {
       date: "June 10, 2024",
       category: "Financing",
       image: "/lovable-uploads/Palm2.png",
-      readTime: "6 min read"
+      readTime: "6 min read",
+      slug: "90-percent-financing-how-we-make-paradise-accessible"
     }
   ];
+
+  const handleBlogClick = (slug: string) => {
+    // For now, we'll just scroll to the top or you can implement actual blog routing
+    console.log(`Navigating to blog post: ${slug}`);
+    // In a real application, you would navigate to the blog post
+    // For example: navigate(`/blog/${slug}`);
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white font-light">
@@ -218,7 +228,7 @@ const Index = () => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
-                  className="text-black hover:text-gray-600 transition-colors duration-200 text-base tracking-wide font-medium"
+                  className="text-black hover:text-gray-600 transition-colors duration-200 text-lg tracking-wide font-medium"
                 >
                   {item}
                 </button>
@@ -266,14 +276,14 @@ const Index = () => {
         }}
       >
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4 animate-fade-in">
-          <h1 className="text-3xl md:text-5xl font-medium tracking-tight mb-8 leading-tight text-white drop-shadow-lg">
+          <h1 className="text-4xl md:text-6xl font-medium tracking-tight mb-8 leading-tight text-white drop-shadow-lg">
             Get Your Own Piece of this Paradise
           </h1>
         </div>
       </section>
 
       {/* Introduction Section */}
-      <section className="py-4 px-4">
+      <section className="py-2 px-4">
         <div className="max-w-6xl mx-auto animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
           <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-center mb-6">
             We Finance Up To 90% of Your First Acquisition
@@ -294,7 +304,7 @@ const Index = () => {
       </section>
 
       {/* Properties Section */}
-      <section id="properties" className="py-4 px-4">
+      <section id="properties" className="py-2 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-6 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
@@ -343,7 +353,7 @@ const Index = () => {
       </section>
 
       {/* Houses Section */}
-      <section id="houses" className="py-4 px-4">
+      <section id="houses" className="py-2 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-6 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
@@ -382,7 +392,7 @@ const Index = () => {
       </section>
 
       {/* Why Cartagena Section */}
-      <section id="why-cartagena" className="py-4 px-4">
+      <section id="why-cartagena" className="py-2 px-4">
         <div className="max-w-6xl mx-auto animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
           <div className="glass-card p-12">
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-center mb-8">
@@ -418,7 +428,7 @@ const Index = () => {
       </section>
 
       {/* Blog Section */}
-      <section id="blog" className="py-4 px-4">
+      <section id="blog" className="py-2 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-6 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
@@ -449,6 +459,15 @@ const Index = () => {
                         {post.category}
                       </span>
                     </div>
+                    {post.title === "90% Financing: How We Make Paradise Accessible" && (
+                      <div className="absolute bottom-4 right-4">
+                        <img 
+                          src="/lovable-uploads/blackDeal.png" 
+                          alt="Special Deal" 
+                          className="w-12 h-12 object-contain"
+                        />
+                      </div>
+                    )}
                   </div>
                   <div className="p-6">
                     <div className="flex items-center text-white/60 text-sm mb-3">
@@ -459,7 +478,10 @@ const Index = () => {
                     </div>
                     <h3 className="text-xl font-medium mb-3 tracking-tight">{post.title}</h3>
                     <p className="text-white/80 mb-4 leading-relaxed">{post.excerpt}</p>
-                    <button className="text-blue-400 hover:text-blue-300 transition-colors flex items-center">
+                    <button 
+                      onClick={() => handleBlogClick(post.slug)}
+                      className="text-blue-400 hover:text-blue-300 transition-colors flex items-center cursor-pointer"
+                    >
                       Read More <ArrowRight className="w-4 h-4 ml-2" />
                     </button>
                   </div>
@@ -472,7 +494,7 @@ const Index = () => {
 
       {/* Why Work With Us Section */}
       <section 
-        className="py-4 px-4 relative"
+        className="py-2 px-4 relative"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('/lovable-uploads/224e6347-54c1-4aeb-b393-bf4c2e4418ca.png')`,
           backgroundSize: 'cover',
@@ -518,7 +540,7 @@ const Index = () => {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-4 px-4">
+      <section id="pricing" className="py-2 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-6 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
@@ -628,7 +650,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-4 px-4">
+      <section id="testimonials" className="py-2 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-6 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
@@ -671,7 +693,7 @@ const Index = () => {
       </section>
 
       {/* Paradise Gallery Section */}
-      <section className="py-4 px-4">
+      <section className="py-2 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-6 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
@@ -684,7 +706,6 @@ const Index = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              '/lovable-uploads/d3a6d9ed-ad8d-470d-ad75-f69b273035a2.png',
               '/lovable-uploads/ad8a077f-6bbb-4e03-90c6-77548383c05f.png',
               '/lovable-uploads/03ec796e-f85a-455a-a824-bb2546ecd616.png',
               '/lovable-uploads/68f3efc7-0335-4042-b130-cff6b2fa8298.png',
@@ -723,7 +744,7 @@ const Index = () => {
 
       {/* Mission Statement Section */}
       <section 
-        className="py-4 px-4 relative"
+        className="py-2 px-4 relative"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/lovable-uploads/47bc7e11-e60d-4420-a0f1-ca6075a64b96.png')`,
           backgroundSize: 'cover',
@@ -747,7 +768,7 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-4 px-4">
+      <section id="contact" className="py-2 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-6 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
@@ -814,7 +835,7 @@ const Index = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-4 px-4">
+      <section className="py-2 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-6 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
@@ -841,7 +862,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-4 px-4 border-t border-white/10">
+      <footer className="py-2 px-4 border-t border-white/10">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             <div>
