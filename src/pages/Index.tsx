@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { ChevronDown, Menu, X, Phone, Mail, MapPin, Star, Home, Users, MessageCircle, FileText, Calendar, ArrowRight, PlayCircle, Heart, Shield, Zap, Award, TrendingUp, DollarSign, Globe, Camera } from 'lucide-react';
 
@@ -93,6 +92,13 @@ const Index = () => {
       image: "/images/testimonial7.jpg", 
       quote: "After years of dreaming about a tropical getaway, AcuaBeach made it happen. The 90% financing option was a game-changer for me. Now I have my own beachfront lot where I can build my retirement home. The team was professional and supportive throughout the entire process.",
       result: "Secured dream retirement property with innovative financing"
+    },
+    {
+      name: "Robert Johnson",
+      location: "Atlanta, Georgia",
+      image: "/images/testimonial8.jpg",
+      quote: "I was looking for an investment opportunity that would diversify my portfolio beyond traditional stocks and bonds. AcuaBeach offered exactly what I needed - a tangible asset in a growing market with incredible potential. The financing terms were unbeatable, and I now own two lots that I plan to develop over the next few years.",
+      result: "Diversified investment portfolio with high-growth tropical real estate"
     }
   ];
 
@@ -201,7 +207,7 @@ const Index = () => {
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="text-6xl font-bold tracking-tight bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent drop-shadow-lg">
+            <div className="text-4xl font-bold tracking-tight bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent drop-shadow-lg">
               AcuaBeach
             </div>
             
@@ -211,7 +217,7 @@ const Index = () => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
-                  className="text-gray-800 hover:text-gray-600 transition-colors duration-200 text-sm tracking-wide font-medium"
+                  className="text-black hover:text-gray-600 transition-colors duration-200 text-sm tracking-wide font-medium"
                 >
                   {item}
                 </button>
@@ -223,7 +229,7 @@ const Index = () => {
               className="md:hidden p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X size={24} className="text-gray-800" /> : <Menu size={24} className="text-gray-800" />}
+              {isMenuOpen ? <X size={24} className="text-black" /> : <Menu size={24} className="text-black" />}
             </button>
           </div>
         </div>
@@ -237,7 +243,7 @@ const Index = () => {
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
-                className="text-left text-gray-800 hover:text-gray-600 transition-colors duration-200 text-lg font-medium"
+                className="text-left text-black hover:text-gray-600 transition-colors duration-200 text-lg font-medium"
               >
                 {item}
               </button>
@@ -259,16 +265,16 @@ const Index = () => {
         }}
       >
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4 animate-fade-in">
-          <h1 className="text-4xl md:text-6xl font-medium tracking-tight mb-8 leading-tight text-white drop-shadow-lg">
+          <h1 className="text-6xl md:text-9xl font-medium tracking-tight mb-8 leading-tight text-white drop-shadow-lg">
             Get Your Own Piece of this Paradise
           </h1>
         </div>
       </section>
 
       {/* Introduction Section */}
-      <section className="py-20 px-4">
+      <section className="py-8 px-4">
         <div className="max-w-6xl mx-auto animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
-          <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-center mb-6">
             We Finance Up To 90% of Your First Acquisition
           </h2>
           <div className="text-lg md:text-xl text-white/80 leading-relaxed max-w-4xl mx-auto text-center space-y-6">
@@ -287,9 +293,9 @@ const Index = () => {
       </section>
 
       {/* Properties Section */}
-      <section id="properties" className="py-20 px-4">
+      <section id="properties" className="py-8 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
+          <div className="text-center mb-6 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
               Choose Your Perfect Lot
             </h2>
@@ -320,14 +326,6 @@ const Index = () => {
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-black/20"></div>
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <div className="flex justify-between items-end">
-                        <div>
-                          <div className="text-2xl font-medium">{lot.price}</div>
-                          <div className="text-white/80">{lot.pricePerSqFt}</div>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-medium mb-3 tracking-tight">{lot.title}</h3>
@@ -344,9 +342,9 @@ const Index = () => {
       </section>
 
       {/* Houses Section */}
-      <section id="houses" className="py-20 px-4">
+      <section id="houses" className="py-8 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
+          <div className="text-center mb-6 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
               Dream Home Designs
             </h2>
@@ -383,7 +381,7 @@ const Index = () => {
       </section>
 
       {/* Why Cartagena Section */}
-      <section id="why-cartagena" className="py-20 px-4">
+      <section id="why-cartagena" className="py-8 px-4">
         <div className="max-w-6xl mx-auto animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
           <div className="glass-card p-12">
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-center mb-8">
@@ -418,100 +416,10 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Why Work With Us Section */}
-      <section 
-        className="py-20 px-4 relative"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('/lovable-uploads/224e6347-54c1-4aeb-b393-bf4c2e4418ca.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        <div className="max-w-6xl mx-auto animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-center mb-8 text-white drop-shadow-lg">
-            Your Dream, Our Commitment: The AcuaBeach Advantage
-          </h2>
-          <p className="text-lg md:text-xl text-white/90 leading-relaxed text-center max-w-4xl mx-auto mb-12 drop-shadow-md">
-            At AcuaBeach, we are passionately dedicated to helping the average travel enthusiast realize their dream 
-            of owning a piece of tropical paradise. We stand alone in the market by offering an unprecedented up to 90% 
-            financing because we own all our prime lots outright, cutting out intermediaries. Beyond acquisition, we are 
-            a full-service organization providing comprehensive support for developing your acquired lot(s), transforming 
-            your vision into reality, whether it's an A-frame, Mediterranean, or any other style.
-          </p>
-
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <Shield className="w-12 h-12 mx-auto mb-4 text-green-400" />
-              <h3 className="text-lg font-medium mb-2 text-white">90% Financing</h3>
-              <p className="text-white/80 text-sm">Unmatched financing options make ownership accessible</p>
-            </div>
-            <div className="text-center">
-              <Home className="w-12 h-12 mx-auto mb-4 text-blue-400" />
-              <h3 className="text-lg font-medium mb-2 text-white">Full-Service Support</h3>
-              <p className="text-white/80 text-sm">From lot to dream home, we handle everything</p>
-            </div>
-            <div className="text-center">
-              <Award className="w-12 h-12 mx-auto mb-4 text-purple-400" />
-              <h3 className="text-lg font-medium mb-2 text-white">Prime Locations</h3>
-              <p className="text-white/80 text-sm">We own the best lots outright, no intermediaries</p>
-            </div>
-            <div className="text-center">
-              <Zap className="w-12 h-12 mx-auto mb-4 text-yellow-400" />
-              <h3 className="text-lg font-medium mb-2 text-white">Transparent Process</h3>
-              <p className="text-white/80 text-sm">Clear, honest communication every step of the way</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section id="testimonials" className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
-            <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
-              Success Stories from Paradise
-            </h2>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              Join hundreds of satisfied property owners who've made their tropical dreams come true with AcuaBeach.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000"
-                style={{ transitionDelay: `${index * 150}ms` }}
-              >
-                <div className="glass-card p-6 h-full">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full mr-4"></div>
-                    <div>
-                      <h4 className="font-medium">{testimonial.name}</h4>
-                      <p className="text-white/60 text-sm">{testimonial.location}</p>
-                    </div>
-                  </div>
-                  <div className="flex mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-white/80 mb-4 leading-relaxed">"{testimonial.quote}"</p>
-                  <div className="border-t border-white/10 pt-4">
-                    <p className="text-green-400 text-sm font-medium">{testimonial.result}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Blog Section */}
-      <section id="blog" className="py-20 px-4">
+      <section id="blog" className="py-8 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
+          <div className="text-center mb-6 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
               Latest Insights
             </h2>
@@ -561,77 +469,57 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Paradise Gallery Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
-            <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
-              Paradise Gallery
-            </h2>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              Explore the breathtaking beauty of Cartagena through our curated collection of properties and locations.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              '/lovable-uploads/c655066d-cf91-4a9a-a2f9-5cf5433f3693.png',
-              '/lovable-uploads/d3a6d9ed-ad8d-470d-ad75-f69b273035a2.png',
-              '/lovable-uploads/ad8a077f-6bbb-4e03-90c6-77548383c05f.png',
-              '/lovable-uploads/03ec796e-f85a-455a-a824-bb2546ecd616.png',
-              '/lovable-uploads/68f3efc7-0335-4042-b130-cff6b2fa8298.png',
-              '/lovable-uploads/06c972c6-ab0e-467a-8e5e-6db9dd33ce1e.png',
-              '/lovable-uploads/facd91d9-f361-4178-a91e-f9c693f65063.png',
-              '/lovable-uploads/06023877-fe2a-4aab-aa35-dcc9f6f6f16c.png',
-              '/lovable-uploads/5555ff63-3c02-43e4-97a8-a42c369a982f.png'
-            ].map((image, index) => (
-              <div
-                key={index}
-                className="animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000 group"
-                style={{ transitionDelay: `${index * 100}ms` }}
-              >
-                <div className="aspect-square rounded-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 cursor-pointer">
-                  <img
-                    src={image}
-                    alt={`Gallery image ${index + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Mission Statement Section */}
+      {/* Why Work With Us Section */}
       <section 
-        className="py-20 px-4 relative"
+        className="py-8 px-4 relative"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/lovable-uploads/47bc7e11-e60d-4420-a0f1-ca6075a64b96.png')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('/lovable-uploads/224e6347-54c1-4aeb-b393-bf4c2e4418ca.png')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
         }}
       >
         <div className="max-w-6xl mx-auto animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000 relative z-10">
-          <div className="glass-card p-12 text-center">
-            <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-8">
-              Our Mission: Democratizing Tropical Homeownership
-            </h2>
-            <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-4xl mx-auto">
-              AcuaBeach was founded on the belief that owning a piece of tropical paradise shouldn't be limited to 
-              multimillionaires and Hollywood stars. Our mission is to democratize access to prime international real estate, 
-              providing unparalleled financing, transparent processes, and comprehensive support to empower individuals and 
-              families to build equity and secure their dreams in a vibrant, flourishing market like Cartagena.
-            </p>
+          <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-center mb-8 text-white drop-shadow-lg">
+            Your Dream, Our Commitment: The AcuaBeach Advantage
+          </h2>
+          <p className="text-lg md:text-xl text-white/90 leading-relaxed text-center max-w-4xl mx-auto mb-12 drop-shadow-md">
+            At AcuaBeach, we are passionately dedicated to helping the average travel enthusiast realize their dream 
+            of owning a piece of tropical paradise. We stand alone in the market by offering an unprecedented up to 90% 
+            financing because we own all our prime lots outright, cutting out intermediaries. Beyond acquisition, we are 
+            a full-service organization providing comprehensive support for developing your acquired lot(s), transforming 
+            your vision into reality, whether it's an A-frame, Mediterranean, or any other style.
+          </p>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <Shield className="w-12 h-12 mx-auto mb-4 text-green-400" />
+              <h3 className="text-lg font-medium mb-2 text-white">90% Financing</h3>
+              <p className="text-white/80 text-sm">Unmatched financing options make ownership accessible</p>
+            </div>
+            <div className="text-center">
+              <Home className="w-12 h-12 mx-auto mb-4 text-blue-400" />
+              <h3 className="text-lg font-medium mb-2 text-white">Full-Service Support</h3>
+              <p className="text-white/80 text-sm">From lot to dream home, we handle everything</p>
+            </div>
+            <div className="text-center">
+              <Award className="w-12 h-12 mx-auto mb-4 text-purple-400" />
+              <h3 className="text-lg font-medium mb-2 text-white">Prime Locations</h3>
+              <p className="text-white/80 text-sm">We own the best lots outright, no intermediaries</p>
+            </div>
+            <div className="text-center">
+              <Zap className="w-12 h-12 mx-auto mb-4 text-yellow-400" />
+              <h3 className="text-lg font-medium mb-2 text-white">Transparent Process</h3>
+              <p className="text-white/80 text-sm">Clear, honest communication every step of the way</p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 px-4">
+      <section id="pricing" className="py-8 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
+          <div className="text-center mb-6 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
               Investment Opportunities
             </h2>
@@ -738,37 +626,126 @@ const Index = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
+      {/* Testimonials Section */}
+      <section id="testimonials" className="py-8 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-6 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
-              Frequently Asked Questions
+              Success Stories from Paradise
             </h2>
-            <p className="text-xl text-white/80">
-              Get answers to common questions about investing in Cartagena real estate.
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              Join hundreds of satisfied property owners who've made their tropical dreams come true with AcuaBeach.
             </p>
           </div>
 
-          <div className="space-y-6">
-            {faqs.map((faq, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000 glass-card p-6"
-                style={{ transitionDelay: `${index * 100}ms` }}
+                className="animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000"
+                style={{ transitionDelay: `${index * 150}ms` }}
               >
-                <h3 className="text-lg font-medium mb-3">{faq.question}</h3>
-                <p className="text-white/80 leading-relaxed">{faq.answer}</p>
+                <div className="glass-card p-6 h-full">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full mr-4"></div>
+                    <div>
+                      <h4 className="font-medium">{testimonial.name}</h4>
+                      <p className="text-white/60 text-sm">{testimonial.location}</p>
+                    </div>
+                  </div>
+                  <div className="flex mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-white/80 mb-4 leading-relaxed">"{testimonial.quote}"</p>
+                  <div className="border-t border-white/10 pt-4">
+                    <p className="text-green-400 text-sm font-medium">{testimonial.result}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Paradise Gallery Section */}
+      <section className="py-8 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-6 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
+            <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
+              Paradise Gallery
+            </h2>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              Explore the breathtaking beauty of Cartagena through our curated collection of properties and locations.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              '/lovable-uploads/c655066d-cf91-4a9a-a2f9-5cf5433f3693.png',
+              '/lovable-uploads/d3a6d9ed-ad8d-470d-ad75-f69b273035a2.png',
+              '/lovable-uploads/ad8a077f-6bbb-4e03-90c6-77548383c05f.png',
+              '/lovable-uploads/03ec796e-f85a-455a-a824-bb2546ecd616.png',
+              '/lovable-uploads/68f3efc7-0335-4042-b130-cff6b2fa8298.png',
+              '/lovable-uploads/06c972c6-ab0e-467a-8e5e-6db9dd33ce1e.png',
+              '/lovable-uploads/facd91d9-f361-4178-a91e-f9c693f65063.png',
+              '/lovable-uploads/06023877-fe2a-4aab-aa35-dcc9f6f6f16c.png',
+              '/lovable-uploads/5555ff63-3c02-43e4-97a8-a42c369a982f.png',
+              '/lovable-uploads/45d3a96e-6354-44bc-8281-c4fbba72a3a1.png',
+              '/lovable-uploads/4a29844e-19ed-443d-8095-a6dc1ab4a8a5.png',
+              '/lovable-uploads/d7afc008-a719-47d8-96d0-a99b37a71d68.png',
+              '/lovable-uploads/6bcb673c-de07-4891-9269-666d3033b94f.png',
+              '/lovable-uploads/dfea186a-c804-4729-b7b8-b620b3e6550f.png',
+              '/lovable-uploads/27901c6d-a934-433a-b001-84c373d1ea27.png'
+            ].map((image, index) => (
+              <div
+                key={index}
+                className="animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000 group"
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
+                <div className="aspect-square rounded-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 cursor-pointer">
+                  <img
+                    src={image}
+                    alt={`Gallery image ${index + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Mission Statement Section */}
+      <section 
+        className="py-8 px-4 relative"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/lovable-uploads/47bc7e11-e60d-4420-a0f1-ca6075a64b96.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="max-w-6xl mx-auto animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000 relative z-10">
+          <div className="glass-card p-12 text-center">
+            <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-8">
+              Our Mission: Democratizing Tropical Homeownership
+            </h2>
+            <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-4xl mx-auto">
+              AcuaBeach was founded on the belief that owning a piece of tropical paradise shouldn't be limited to 
+              multimillionaires and Hollywood stars. Our mission is to democratize access to prime international real estate, 
+              providing unparalleled financing, transparent processes, and comprehensive support to empower individuals and 
+              families to build equity and secure their dreams in a vibrant, flourishing market like Cartagena.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4">
+      <section id="contact" className="py-8 px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
+          <div className="text-center mb-6 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
               Start Your Paradise Journey
             </h2>
@@ -832,8 +809,78 @@ const Index = () => {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-8 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-6 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
+            <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-xl text-white/80">
+              Get answers to common questions about investing in Cartagena real estate.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {faqs.map((faq, index) => (
+              <div
+                key={index}
+                className="animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000 glass-card p-6"
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
+                <h3 className="text-lg font-medium mb-3">{faq.question}</h3>
+                <p className="text-white/80 leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Second Success Stories from Paradise Section */}
+      <section className="py-8 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-6 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
+            <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
+              Success Stories from Paradise
+            </h2>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              More inspiring stories from our satisfied property owners who've achieved their tropical dreams.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.slice(0, 6).map((testimonial, index) => (
+              <div
+                key={index}
+                className="animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000"
+                style={{ transitionDelay: `${index * 150}ms` }}
+              >
+                <div className="glass-card p-6 h-full">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full mr-4"></div>
+                    <div>
+                      <h4 className="font-medium">{testimonial.name}</h4>
+                      <p className="text-white/60 text-sm">{testimonial.location}</p>
+                    </div>
+                  </div>
+                  <div className="flex mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-white/80 mb-4 leading-relaxed">"{testimonial.quote}"</p>
+                  <div className="border-t border-white/10 pt-4">
+                    <p className="text-green-400 text-sm font-medium">{testimonial.result}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
-      <footer className="py-16 px-4 border-t border-white/10">
+      <footer className="py-8 px-4 border-t border-white/10">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             <div>
