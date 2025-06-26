@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef, useState } from 'react';
 import { ChevronDown, Menu, X, Phone, Mail, MapPin, Star, Home, Users, MessageCircle, FileText, Calendar, ArrowRight, PlayCircle, Heart, Shield, Zap, Award, TrendingUp, DollarSign, Globe, Camera } from 'lucide-react';
 
@@ -106,7 +107,7 @@ const Index = () => {
     {
       title: "Beachfront Properties",
       description: "Wake up to the Caribbean Sea. Direct access to pristine sands and unparalleled views. Your ultimate luxury escape.",
-      image: "/lovable-uploads/0acac4b7-3a44-4dff-bba2-e6bc9fd9fcf3.png",
+      image: "/lovable-uploads/boquilaPlayaHotels.png",
       price: "$200,000",
       pricePerSqFt: "$100/sf"
     },
@@ -194,7 +195,7 @@ const Index = () => {
       excerpt: "Understanding our revolutionary financing model that's opening doors to tropical property ownership for everyone.",
       date: "June 10, 2024",
       category: "Financing",
-      image: "/lovable-uploads/3482fbb8-15a8-4f60-b2b6-ca36f7ff9730.png",
+      image: "/lovable-uploads/Palm2.png",
       readTime: "6 min read"
     }
   ];
@@ -217,7 +218,7 @@ const Index = () => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
-                  className="text-black hover:text-gray-600 transition-colors duration-200 text-sm tracking-wide font-medium"
+                  className="text-black hover:text-gray-600 transition-colors duration-200 text-base tracking-wide font-medium"
                 >
                   {item}
                 </button>
@@ -243,7 +244,7 @@ const Index = () => {
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
-                className="text-left text-black hover:text-gray-600 transition-colors duration-200 text-lg font-medium"
+                className="text-left text-black hover:text-gray-600 transition-colors duration-200 text-xl font-medium"
               >
                 {item}
               </button>
@@ -265,14 +266,14 @@ const Index = () => {
         }}
       >
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4 animate-fade-in">
-          <h1 className="text-6xl md:text-9xl font-medium tracking-tight mb-8 leading-tight text-white drop-shadow-lg">
+          <h1 className="text-3xl md:text-5xl font-medium tracking-tight mb-8 leading-tight text-white drop-shadow-lg">
             Get Your Own Piece of this Paradise
           </h1>
         </div>
       </section>
 
       {/* Introduction Section */}
-      <section className="py-8 px-4">
+      <section className="py-4 px-4">
         <div className="max-w-6xl mx-auto animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
           <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-center mb-6">
             We Finance Up To 90% of Your First Acquisition
@@ -293,7 +294,7 @@ const Index = () => {
       </section>
 
       {/* Properties Section */}
-      <section id="properties" className="py-8 px-4">
+      <section id="properties" className="py-4 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-6 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
@@ -342,7 +343,7 @@ const Index = () => {
       </section>
 
       {/* Houses Section */}
-      <section id="houses" className="py-8 px-4">
+      <section id="houses" className="py-4 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-6 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
@@ -381,7 +382,7 @@ const Index = () => {
       </section>
 
       {/* Why Cartagena Section */}
-      <section id="why-cartagena" className="py-8 px-4">
+      <section id="why-cartagena" className="py-4 px-4">
         <div className="max-w-6xl mx-auto animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
           <div className="glass-card p-12">
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-center mb-8">
@@ -417,7 +418,7 @@ const Index = () => {
       </section>
 
       {/* Blog Section */}
-      <section id="blog" className="py-8 px-4">
+      <section id="blog" className="py-4 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-6 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
@@ -471,7 +472,7 @@ const Index = () => {
 
       {/* Why Work With Us Section */}
       <section 
-        className="py-8 px-4 relative"
+        className="py-4 px-4 relative"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('/lovable-uploads/224e6347-54c1-4aeb-b393-bf4c2e4418ca.png')`,
           backgroundSize: 'cover',
@@ -517,7 +518,7 @@ const Index = () => {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-8 px-4">
+      <section id="pricing" className="py-4 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-6 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
@@ -627,7 +628,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-8 px-4">
+      <section id="testimonials" className="py-4 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-6 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
@@ -670,7 +671,7 @@ const Index = () => {
       </section>
 
       {/* Paradise Gallery Section */}
-      <section className="py-8 px-4">
+      <section className="py-4 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-6 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
@@ -683,7 +684,6 @@ const Index = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              '/lovable-uploads/c655066d-cf91-4a9a-a2f9-5cf5433f3693.png',
               '/lovable-uploads/d3a6d9ed-ad8d-470d-ad75-f69b273035a2.png',
               '/lovable-uploads/ad8a077f-6bbb-4e03-90c6-77548383c05f.png',
               '/lovable-uploads/03ec796e-f85a-455a-a824-bb2546ecd616.png',
@@ -697,7 +697,11 @@ const Index = () => {
               '/lovable-uploads/d7afc008-a719-47d8-96d0-a99b37a71d68.png',
               '/lovable-uploads/6bcb673c-de07-4891-9269-666d3033b94f.png',
               '/lovable-uploads/dfea186a-c804-4729-b7b8-b620b3e6550f.png',
-              '/lovable-uploads/27901c6d-a934-433a-b001-84c373d1ea27.png'
+              '/lovable-uploads/27901c6d-a934-433a-b001-84c373d1ea27.png',
+              '/lovable-uploads/beachAccess.png',
+              '/lovable-uploads/beachFront3.png',
+              '/lovable-uploads/Manza.png',
+              '/lovable-uploads/FloorPanWpool.png'
             ].map((image, index) => (
               <div
                 key={index}
@@ -719,7 +723,7 @@ const Index = () => {
 
       {/* Mission Statement Section */}
       <section 
-        className="py-8 px-4 relative"
+        className="py-4 px-4 relative"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/lovable-uploads/47bc7e11-e60d-4420-a0f1-ca6075a64b96.png')`,
           backgroundSize: 'cover',
@@ -743,7 +747,7 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-8 px-4">
+      <section id="contact" className="py-4 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-6 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
@@ -810,7 +814,7 @@ const Index = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-8 px-4">
+      <section className="py-4 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-6 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
@@ -836,51 +840,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Second Success Stories from Paradise Section */}
-      <section className="py-8 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-6 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
-            <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
-              Success Stories from Paradise
-            </h2>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              More inspiring stories from our satisfied property owners who've achieved their tropical dreams.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.slice(0, 6).map((testimonial, index) => (
-              <div
-                key={index}
-                className="animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000"
-                style={{ transitionDelay: `${index * 150}ms` }}
-              >
-                <div className="glass-card p-6 h-full">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full mr-4"></div>
-                    <div>
-                      <h4 className="font-medium">{testimonial.name}</h4>
-                      <p className="text-white/60 text-sm">{testimonial.location}</p>
-                    </div>
-                  </div>
-                  <div className="flex mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-white/80 mb-4 leading-relaxed">"{testimonial.quote}"</p>
-                  <div className="border-t border-white/10 pt-4">
-                    <p className="text-green-400 text-sm font-medium">{testimonial.result}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
-      <footer className="py-8 px-4 border-t border-white/10">
+      <footer className="py-4 px-4 border-t border-white/10">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             <div>
