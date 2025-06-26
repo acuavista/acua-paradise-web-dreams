@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { ChevronDown, Menu, X, Phone, Mail, MapPin, Star, Home, Users, MessageCircle, FileText, Calendar, ArrowRight, PlayCircle, Heart, Shield, Zap, Award, TrendingUp, DollarSign, Globe, Camera } from 'lucide-react';
 
@@ -188,7 +187,7 @@ const Index = () => {
       excerpt: "From design to construction, learn everything you need to know about creating your perfect tropical retreat.",
       date: "June 15, 2024",
       category: "Construction",
-      image: "/lovable-uploads/bdb9c6ab-5072-4565-ab27-553acc0e72b4.png",
+      image: "/lovable-uploads/Palm2.png",
       readTime: "8 min read",
       slug: "building-your-dream-home"
     },
@@ -199,7 +198,8 @@ const Index = () => {
       category: "Financing",
       image: "/lovable-uploads/Palm2.png",
       readTime: "6 min read",
-      slug: "90-percent-financing-how-we-make-paradise-accessible"
+      slug: "90-percent-financing-how-we-make-paradise-accessible",
+      hasSpecialIcon: true
     }
   ];
 
@@ -428,9 +428,9 @@ const Index = () => {
       </section>
 
       {/* Blog Section */}
-      <section id="blog" className="py-2 px-4">
+      <section id="blog" className="py-8 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-6 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
+          <div className="text-center mb-16 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
               Latest Insights
             </h2>
@@ -459,7 +459,7 @@ const Index = () => {
                         {post.category}
                       </span>
                     </div>
-                    {post.title === "90% Financing: How We Make Paradise Accessible" && (
+                    {post.hasSpecialIcon && (
                       <div className="absolute bottom-4 right-4">
                         <img 
                           src="/lovable-uploads/blackDeal.png" 
@@ -482,7 +482,7 @@ const Index = () => {
                       onClick={() => handleBlogClick(post.slug)}
                       className="text-blue-400 hover:text-blue-300 transition-colors flex items-center cursor-pointer"
                     >
-                      Read More <ArrowRight className="w-4 h-4 ml-2" />
+                      Learn More <ArrowRight className="w-4 h-4 ml-2" />
                     </button>
                   </div>
                 </div>
