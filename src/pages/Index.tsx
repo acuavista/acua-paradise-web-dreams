@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef, useState } from 'react';
 import { ChevronDown, Menu, X, Phone, Mail, MapPin, Star, Home, Users, MessageCircle, FileText, Calendar, ArrowRight, PlayCircle, Heart, Shield, Zap, Award, TrendingUp, DollarSign, Globe, Camera } from 'lucide-react';
 
@@ -196,7 +197,7 @@ const Index = () => {
       excerpt: "Understanding our revolutionary financing model that's opening doors to tropical property ownership for everyone.",
       date: "June 10, 2024",
       category: "Financing",
-      image: "/lovable-uploads/Palm2.png",
+      image: "/lovable-uploads/blackDeal.png",
       readTime: "6 min read",
       slug: "90-percent-financing-how-we-make-paradise-accessible",
       hasSpecialIcon: true
