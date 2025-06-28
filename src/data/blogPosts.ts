@@ -14,7 +14,7 @@ export const blogPosts = [
     excerpt: "From design to construction, learn everything you need to know about creating your perfect tropical retreat.",
     date: "June 15, 2024",
     category: "Construction",
-    image: "/lovable-uploads/Palm2.png",
+    image: "/lovable-uploads/ff3f2c8a-caa1-4efe-a171-403f8a3fc150.png",
     readTime: "8 min read",
     slug: "building-your-dream-home"
   },
@@ -23,7 +23,7 @@ export const blogPosts = [
     excerpt: "Understanding our revolutionary financing model that's opening doors to tropical property ownership for everyone.",
     date: "June 10, 2024",
     category: "Financing",
-    image: "/lovable-uploads/blackDeal.png",
+    image: "/lovable-uploads/3482fbb8-15a8-4f60-b2b6-ca36f7ff9730.png",
     readTime: "6 min read",
     slug: "90-percent-financing-how-we-make-paradise-accessible",
     hasSpecialIcon: true
