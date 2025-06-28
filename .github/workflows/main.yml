@@ -1,0 +1,49 @@
+# This is your robot's instruction manual!
+# It tells GitHub what to do when you update your website.
+
+# Give your robot a name!
+name: Deploy My Awesome Website to GitHub Pages
+
+# Tell the robot WHEN to run:
+# Run this robot whenever new code is pushed to your 'main' branch.
+on:
+  push:
+    branches:
+      - main # IMPORTANT: If your main branch is called 'master', change this to 'master'
+
+# Give the robot permission to put files on GitHub Pages.
+permissions:
+  contents: write # This lets the robot write to your repository for GitHub Pages
+
+# These are the tasks your robot will perform:
+jobs:
+  build-and-deploy:
+    # Tell the robot to use a Linux computer to do its work.
+    runs-on: ubuntu-latest
+
+    # Here are the individual steps for the robot:
+    steps:
+      # Step 1: Get all your website's code from GitHub.
+      - name: Get Website Code
+        uses: actions/checkout@v4
+
+      # Step 2: Set up Node.js (this is like setting up a workspace for Vite).
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Use a recent stable version of Node.js. '20' is good.
+
+      # Step 3: Install all necessary website ingredients (dependencies).
+      - name: Install Website Dependencies
+        run: npm install
+
+      # Step 4: BUILD your website (this is the "bake the cake" step!).
+      - name: Build My Website
+        run: npm run build
+
+      # Step 5: Publish the built website to GitHub Pages.
+      - name: Publish to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3 # This is a special tool for GitHub Pages deployment
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # This is a secret token GitHub automatically provides for security
+          publish_dir: ./dist # Tell the robot where the "baked cake" (your dist folder) is
