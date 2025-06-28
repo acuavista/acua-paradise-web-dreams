@@ -2,10 +2,12 @@
 import React from 'react';
 import { Calendar, ArrowRight } from 'lucide-react';
 import { blogPosts } from '../data/blogPosts';
+import { useNavigate } from 'react-router-dom';
 
 const BlogSection: React.FC = () => {
-  const handleBlogClick = (slug: string) => {
-    console.log(`Navigating to blog post: ${slug}`);
+  const navigate = useNavigate();   
+      const handleBlogClick = (slug: string) => {
+         navigate(`/blog/${slug}`);
   };
 
   return (
