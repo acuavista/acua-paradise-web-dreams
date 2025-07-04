@@ -130,8 +130,8 @@ const BlogPostDetail = () => {
         {articleContent}
 
         <div className="mt-12 text-center">
-          <a href="/" className="text-blue-400 hover:text-blue-300 transition-colors flex items-center justify-center">
-            &larr; Go back to Home
+          <a href={import.meta.env.BASE_URL} className="mt-8 text-blue-400 hover:text-blue-300 transition-colors flex items-center justify-center">
+  &larr; Go back to Home
           </a>
         </div>
       </div>
