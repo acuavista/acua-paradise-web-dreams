@@ -3,7 +3,7 @@ export const lotCategories = [
   {
     title: "Beachfront Properties",
     description: "Wake up to the Caribbean Sea. Direct access to pristine sands and unparalleled views. Your ultimate luxury escape.",
-    image: "/lovable-uploads/boquilaPlayaHotels.png",
+    image: import.meta.env.BASE_URL + "lovable-uploads/a9b17377-c565-45d2-98c3-326004ae6ce8.png"
     price: "$200,000",
     pricePerSqFt: "$100/sf"
   },
