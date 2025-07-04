@@ -41,9 +41,21 @@ const PropertiesSection: React.FC = () => {
                 <div className="p-6">
                   <h3 className="text-xl font-medium mb-3 tracking-tight">{lot.title}</h3>
                   <p className="text-white/80 mb-6 leading-relaxed">{lot.description}</p>
-                  <a href="#contact" className="neu-button w-full text-center block"> {/* Added text-center and block for proper display */}
-                      View Details & Inquire
-                  </a>
+                  <a
+  href="#contact" // Keep href for accessibility and fallback
+  className="neu-button w-full text-center block"
+  onClick={(e) => {
+    e.preventDefault(); // Prevent React Router from handling this as a route
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+      // Manually update the URL hash without triggering router re-render
+      window.history.pushState(null, '', '#contact');
+    }
+  }}
+>
+  View Details & Inquire
+</a>
                     
       
                 </div>
