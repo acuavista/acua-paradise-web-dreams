@@ -45,7 +45,7 @@ const BlogSection: React.FC = () => {
                   {post.hasSpecialIcon && (
                     <div className="absolute bottom-4 right-4">
                       <img 
-                        src="/lovable-uploads/blackDeal.png" 
+                        src={import.meta.env.BASE_URL + "lovable-uploads/blackDeal.png"} 
                         alt="Special Deal" 
                         className="w-12 h-12 object-contain"
                       />
