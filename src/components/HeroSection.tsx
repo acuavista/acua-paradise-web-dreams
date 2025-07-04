@@ -12,6 +12,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ heroRef }) => {
       id="home" 
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
       style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${import.meta.env.BASE_URL}lovable-uploads/2e8bde97-c8d3-4902-bc1f-f93ac25425e6.png)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
@@ -25,5 +26,4 @@ const HeroSection: React.FC<HeroSectionProps> = ({ heroRef }) => {
     </section>
   );
 };
-
 export default HeroSection;
