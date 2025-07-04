@@ -41,9 +41,11 @@ const PropertiesSection: React.FC = () => {
                 <div className="p-6">
                   <h3 className="text-xl font-medium mb-3 tracking-tight">{lot.title}</h3>
                   <p className="text-white/80 mb-6 leading-relaxed">{lot.description}</p>
-                  <button className="neu-button w-full">
-                    View Details & Inquire
-                  </button>
+                  <a href="#contact" className="neu-button w-full text-center block"> {/* Added text-center and block for proper display */}
+                      View Details & Inquire
+                  </a>
+                    
+      
                 </div>
               </div>
             </div>
