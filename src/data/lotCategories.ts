@@ -12,7 +12,7 @@ export const lotCategories = [
     title: "Beach Access Properties", 
     description: "Just steps from the shore. Enjoy beach living without the beachfront premium. The perfect balance of value and convenience.",
     image: import.meta.env.BASE_URL + "lovable-uploads/56a22ae8-3d6d-4ba7-8201-dffcf2eb9132.png",
-    price: "$140,000"
+    price: "$140,000",
     pricePerSqFt: "$70/sf",
     recommended: true
   },
