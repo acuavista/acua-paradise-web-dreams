@@ -6,12 +6,7 @@ const AcuaBeachAdvantageSection: React.FC = () => {
   return (
     <section 
       className="py-2 px-4 relative"
-      style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('/lovable-uploads/224e6347-54c1-4aeb-b393-bf4c2e4418ca.png')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
+     
     >
       <div className="max-w-6xl mx-auto animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000 relative z-10">
         <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-center mb-8 text-white drop-shadow-lg">
