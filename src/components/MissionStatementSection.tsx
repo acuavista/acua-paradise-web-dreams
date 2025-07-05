@@ -5,12 +5,7 @@ const MissionStatementSection: React.FC = () => {
   return (
     <section 
       className="py-2 px-4 relative"
-      style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/lovable-uploads/47bc7e11-e60d-4420-a0f1-ca6075a64b96.png')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
+     
     >
       <div className="max-w-6xl mx-auto animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000 relative z-10">
         <div className="glass-card p-12 text-center">
