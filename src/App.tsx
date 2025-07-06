@@ -6,6 +6,9 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import BlogPostDetail from "./pages/BlogPostDetail";
+import WhyCartagena from "./pages/WhyCartagena";
+import WhyRealEstate from "./pages/WhyRealEstate";
+import WhyNow from "./pages/WhyNow";
 
 const queryClient = new QueryClient();
 
