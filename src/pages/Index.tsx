@@ -2,8 +2,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Navigation from '../components/Navigation';
 import HeroSection from '../components/HeroSection';
-import IntroductionSection from '../components/IntroductionSection';
+import WhyCardsSection from '../components/WhyCardsSection';
 import PropertiesSection from '../components/PropertiesSection';
+import IntroductionSection from '../components/IntroductionSection';
 import HousesSection from '../components/HousesSection';
 import WhyCartagenaSection from '../components/WhyCartagenaSection';
 import BlogSection from '../components/BlogSection';
@@ -12,9 +13,11 @@ import PricingSection from '../components/PricingSection';
 import TestimonialsSection from '../components/TestimonialsSection';
 import ParadiseGallerySection from '../components/ParadiseGallerySection';
 import MissionStatementSection from '../components/MissionStatementSection';
+import { whyCardsData, whyCardsData2 } from '../data/whyCards';
 import ContactSection from '../components/ContactSection';
 import FAQSection from '../components/FAQSection';
 import Footer from '../components/Footer';
+
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -68,6 +71,12 @@ const Index = () => {
       />
 
       <HeroSection heroRef={heroRef} />
+         
+       <WhyCardsSection 
+        data={whyCardsData} 
+        sectionTitle="Why Invest With Us?"
+        sectionDescription="Discover the compelling reasons to choose AcuaBeach for your tropical real estate journey."
+      />
       <IntroductionSection />
       <PropertiesSection />
       <HousesSection />
