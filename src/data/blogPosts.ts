@@ -14,7 +14,7 @@ export const blogPosts = [
     excerpt: "From design to construction, learn everything you need to know about creating your perfect tropical retreat.",
     date: "June 15, 2024",
     category: "Construction",
-    image: import.meta.env.BASE_URL + "2a62dbf5-dce4-4ff2-8977-9fcf824aaa69.png",
+    image: import.meta.env.BASE_URL + "lovable-uploads/2a62dbf5-dce4-4ff2-8977-9fcf824aaa69.png",
     readTime: "8 min read",
     slug: "building-your-dream-home"
   },
