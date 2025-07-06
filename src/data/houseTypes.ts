@@ -8,7 +8,7 @@ export const houseTypes = [
   {
     title: "Two-Story Homes", 
     description: "Spacious family retreats with multiple levels of luxury. These elegant homes maximize views and living space, featuring traditional Caribbean architecture with modern amenities.",
-    image: import.meta.env.BASE_URL + "lovable-uploads/public/lovable-uploads/ff3f2c8a-caa1-4efe-a171-403f8a3fc150.png"
+    image: import.meta.env.BASE_URL + "lovable-uploads/ff3f2c8a-caa1-4efe-a171-403f8a3fc150.png"
   },
   {
     title: "Luxury Homes",
