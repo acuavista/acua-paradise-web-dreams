@@ -13,7 +13,7 @@ import PricingSection from '../components/PricingSection';
 import TestimonialsSection from '../components/TestimonialsSection';
 import ParadiseGallerySection from '../components/ParadiseGallerySection';
 import MissionStatementSection from '../components/MissionStatementSection';
-import { whyCardsData, whyCardsData2 } from '../data/WhyCards';
+import { whyCardsData, WhyCardsData2 } from '../data/WhyCards';
 import ContactSection from '../components/ContactSection';
 import FAQSection from '../components/FAQSection';
 import Footer from '../components/Footer';
