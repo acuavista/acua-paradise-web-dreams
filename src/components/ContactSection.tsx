@@ -1,3 +1,6 @@
+// This is a dummy change to force a new Netlify deploy and re-detection.
+import React from 'react';
+// ... rest of your code ...
 import React from 'react';
 
 const ContactSection: React.FC = () => {
