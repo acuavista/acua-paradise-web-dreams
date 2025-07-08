@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Navigation from '../components/Navigation';
 import HeroSection from '../components/HeroSection';
 import WhyCardsSection from '../components/WhyCardsSection';
+import { journeyCardsData } from '../data/journeyCards'; 
 import PropertiesSection from '../components/PropertiesSection';
 import IntroductionSection from '../components/IntroductionSection';
 import HousesSection from '../components/HousesSection';
@@ -13,7 +14,7 @@ import PricingSection from '../components/PricingSection';
 import TestimonialsSection from '../components/TestimonialsSection';
 import ParadiseGallerySection from '../components/ParadiseGallerySection';
 import MissionStatementSection from '../components/MissionStatementSection';
-import { whyCardsData, WhyCardsData2 } from '../data/WhyCards';
+import { whyCardsData } from '../data/WhyCards';
 import ContactSection from '../components/ContactSection';
 import FAQSection from '../components/FAQSection';
 import Footer from '../components/Footer';
@@ -77,9 +78,13 @@ const Index = () => {
         data={whyCardsData} 
         sectionTitle="Why Invest With Us?"
         sectionDescription="Discover the compelling reasons to choose AcuaBeach for your tropical real estate journey."
-      />
+      /> 
       <IntroductionSection />
       <PropertiesSection />
+        <WhyCardsSection 
+        data={journeyCardsData} 
+        sectionTitle="Start Your Paradise Journey"
+        sectionDescription="Navigate the path to your dream property with our expert guidance and support."/>
       <HousesSection />
       <WhyCartagenaSection />
       <BlogSection />
