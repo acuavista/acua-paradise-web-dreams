@@ -14,7 +14,7 @@ const ContactSection: React.FC = () => {
         </div>
 
         <div className="glass-card p-8 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
-          <form name="contact" data-netlify="true" className="space-y-6">
+          <form name="contact" data-netlify="true" data-netlify-recaptcha="true" className="space-y-6"> 
             {/* NEW FORM FIELDS START HERE */}
             <div className="grid md:grid-cols-2 gap-6">
               <div>
