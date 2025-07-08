@@ -81,6 +81,33 @@
   </head>
 
   <body>
-    <div id="root"></div>
+   <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+  <input type="text" name="first-name" />
+  <input type="text" name="last-name" />
+  <input type="email" name="email" />
+  <input type="text" name="city" />
+  <input type="text" name="state" />
+  <input type="text" name="country" />
+  <input type="checkbox" name="interest[]" value="land" />
+  <input type="checkbox" name="interest[]" value="camping-spot" />
+  <input type="checkbox" name="interest[]" value="vacation-home" />
+  <input type="checkbox" name="interest[]" value="permanent-home" />
+  <input type="checkbox" name="interest[]" value="run-airbnb" />
+  <input type="checkbox" name="interest[]" value="co-founder" />
+  <input type="checkbox" name="interest[]" value="other-specify" />
+  <input type="text" name="other-interest-text" />
+  <select name="how-hear">
+    <option value=""></option>
+    <option value="search-engine"></option>
+    <option value="social-media"></option>
+    <option value="friend-referral"></option>
+    <option value="online-ad"></option>
+    <option value="article-blog"></option>
+    <option value="other-marketing"></option>
+  </select>
+  <textarea name="message"></textarea>
+  <div data-netlify-recaptcha="true"></div>
+</form> 
+  <div id="root"></div>
   </body>
 </html>
