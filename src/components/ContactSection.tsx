@@ -155,8 +155,8 @@ const ContactSection: React.FC = () => {
                 rows={4}
                 name="message"
                 className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:border-white/40 focus:outline-none transition-colors resize-none"
-                placeholder="Tell us about your tropical property dreams and questions..."
-              ></textarea>
+                placeholder="Tell us about your tropical property dreams and questions...">
+              </textarea>
             </div>
 
             {/* CAPTCHA (Netlify reCAPTCHA) */}
