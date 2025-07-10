@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Navigation from '../components/Navigation';
 import HeroSection from '../components/HeroSection';
 import WhyCardsSection from '../components/WhyCardsSection';
-import { journeyCardsData } from '../data/journeyCards'; 
+import { whyCardsData, whyCardsData2 } from '../data/WhyCards'; 
 import PropertiesSection from '../components/PropertiesSection';
 import IntroductionSection from '../components/IntroductionSection';
 import HousesSection from '../components/HousesSection';
@@ -14,7 +14,6 @@ import PricingSection from '../components/PricingSection';
 import TestimonialsSection from '../components/TestimonialsSection';
 import ParadiseGallerySection from '../components/ParadiseGallerySection';
 import MissionStatementSection from '../components/MissionStatementSection';
-import { whyCardsData } from '../data/WhyCards';
 import ContactSection from '../components/ContactSection';
 import FAQSection from '../components/FAQSection';
 import Footer from '../components/Footer';
@@ -65,39 +64,44 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white font-light">
-      <Navigation 
-        isMenuOpen={isMenuOpen}
-        setIsMenuOpen={setIsMenuOpen}
-        scrollY={scrollY}
-        scrollToSection={scrollToSection}
-      />
+    <Navigation
+      isMenuOpen={isMenuOpen}
+      setIsMenuOpen={setIsMenuOpen}
+      scrollY={scrollY}
+      scrollToSection={scrollToSection}
+    />
 
-      <HeroSection heroRef={heroRef} />
-         
-       <WhyCardsSection 
-        data={whyCardsData} 
-        sectionTitle="Why Invest With Us?"
-        sectionDescription="Discover the compelling reasons to choose AcuaBeach for your tropical real estate journey."
-      /> 
-      <IntroductionSection />
-      <PropertiesSection />
-        <WhyCardsSection 
-        data={journeyCardsData} 
-        sectionTitle="Start Your Paradise Journey"
-        sectionDescription="Navigate the path to your dream property with our expert guidance and support."/>
-      <HousesSection />
-      <WhyCartagenaSection />
-      <BlogSection />
-      <AcuaBeachAdvantageSection />
-      <PricingSection />
-      <TestimonialsSection />
-      <ParadiseGallerySection />
-      <MissionStatementSection />
-      <ContactSection />
-      <FAQSection />
-      <Footer />
-    </div>
-  );
-};
+    <HeroSection heroRef={heroRef} />
 
+    {/* THIS IS THE FIRST set of 3 cards: "Why Invest With Us?" */}
+    <WhyCardsSection
+      data={whyCardsData}
+      sectionTitle="Why Invest With Us?"
+      sectionDescription="Discover the compelling reasons to choose AcuaBeach for your tropical real estate journey."
+    />
+
+    <IntroductionSection />
+    <PropertiesSection />
+
+    {/* THIS IS THE SECOND set of 3 cards: "Start Your Paradise Journey" */}
+    <WhyCardsSection
+      data={whyCardsData2}
+      sectionTitle="Start Your Paradise Journey"
+      sectionDescription="Navigate the path to your dream property with our expert guidance and support."
+    />
+
+    <HousesSection />
+    <WhyCartagenaSection />
+    <BlogSection /> {/* This component should directly follow WhyCartagenaSection now */}
+    <AcuaBeachAdvantageSection />
+    <PricingSection />
+    <TestimonialsSection />
+    <ParadiseGallerySection />
+    <MissionStatementSection />
+    <ContactSection />
+    <FAQSection />
+    <Footer />
+  </div>
+);
+ }; 
 export default Index;
