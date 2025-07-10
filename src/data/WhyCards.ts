@@ -19,11 +19,9 @@ export const whyCardsData = [
   }
 ];
 
-// Add data for the second set of three cards here later if you want them different
+
 export const whyCardsData2 = [
-    //You can add your content for the second set of cards here when ready
-    // Example:
-     {
+         {
       title: "Your Dream, Our Commitment",
        image: "/lovable-uploads/coupleCelebrating.png",
        excerpt: "At the heart of everything we do is your vision. Whether you’re dreaming of a serene beachside escape, a high-return investment, or a tropical retirement haven, we’re here to bring that dream to life—with care, clarity, and integrity.",
