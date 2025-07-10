@@ -32,9 +32,7 @@ export const whyCardsData2 = [
     // {
     //   title: "Seamless Acquisition Process",
     //   image: "/lovable-uploads/NotComplicated",
-    //   excerpt: "Buying foreign real estate can be confusing, complicated, and frustrating. But it is our belief at AcuaVista that becoming owner in a tropical paradise should feel as breezy as the Caribbean air—and with us, it is. We’ve streamlined the entire acquisition process to remove the guesswork, delays, and uncertainty.
-
-No residency requirements. No special visas. No hidden fees. From document verification and legal review to title registration and closing, we handle the heavy lifting so you don’t have to.",
+    //   excerpt: "Buying foreign real estate can be confusing, complicated, and frustrating. But it is our belief at AcuaVista that becoming owner in a tropical paradise should feel as breezy as the Caribbean air—and with us, it is. We’ve streamlined the entire acquisition process to remove the guesswork, delays, and uncertainty. No residency requirements. No special visas. No hidden fees. From document verification and legal review to title registration and closing, we handle the heavy lifting so you don’t have to.",
     //   link: "/path-to-article-5"
     // },
     // {
