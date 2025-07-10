@@ -26,17 +26,17 @@ export const whyCardsData2 = [
        image: "/lovable-uploads/coupleCelebrating.png",
        excerpt: "At the heart of everything we do is your vision. Whether you’re dreaming of a serene beachside escape, a high-return investment, or a tropical retirement haven, we’re here to bring that dream to life—with care, clarity, and integrity.",
        link: "/path-to-article-4"
-    // },
-    // {
-    //   title: "Seamless Acquisition Process",
-    //   image: "/lovable-uploads/NotComplicated",
-    //   excerpt: "Buying foreign real estate can be confusing, complicated, and frustrating. But it is our belief at AcuaVista that becoming owner in a tropical paradise should feel as breezy as the Caribbean air—and with us, it is. We’ve streamlined the entire acquisition process to remove the guesswork, delays, and uncertainty. No residency requirements. No special visas. No hidden fees. From document verification and legal review to title registration and closing, we handle the heavy lifting so you don’t have to.",
-    //   link: "/path-to-article-5"
-    // },
-    // {
-    //   title: "Unbeatable 90% Financing",
-    //   image: "/lovable-uploads/90financing.png",
-    //   excerpt: "As a foreigner, getting a bank loan in a foreign country is literally impossible. We solve this problem by having our own in-house financing company. All you need to qualify is a valid passport, a bank account in your country of origin, and the downpayment for the property you intend to purchase.",
-    //   link: "/path-to-article-6"
-    // }
+     },
+     {
+       title: "Seamless Acquisition Process",
+     image: "/lovable-uploads/NotComplicated",
+       excerpt: "Buying foreign real estate can be confusing, complicated, and frustrating. But it is our belief at AcuaVista that becoming owner in a tropical paradise should feel as breezy as the Caribbean air—and with us, it is. We’ve streamlined the entire acquisition process to remove the guesswork, delays, and uncertainty. No residency requirements. No special visas. No hidden fees. From document verification and legal review to title registration and closing, we handle the heavy lifting so you don’t have to.",
+       link: "/path-to-article-5"
+     },
+     {
+      title: "Unbeatable 90% Financing",
+    image: "/lovable-uploads/90financing.png",
+      excerpt: "As a foreigner, getting a bank loan in a foreign country is literally impossible. We solve this problem by having our own in-house financing company. All you need to qualify is a valid passport, a bank account in your country of origin, and the downpayment for the property you intend to purchase.",
+       link: "/path-to-article-6"
+     }
 ];
