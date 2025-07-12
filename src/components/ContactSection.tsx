@@ -1,9 +1,95 @@
 // This is a dummy change to force a new Netlify deploy and re-detection.
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 // ... rest of your code ...
 
 
 const ContactSection: React.FC = () => {
+  const [recaptchaId, setRecaptchaId] = useState<string | number | null>(null); 
+
+  useEffect(() => {
+    // Ensure grecaptcha is available
+    if (typeof window.grecaptcha !== 'undefined' && typeof window.grecaptcha.render === 'function') {
+      // Render the invisible reCAPTCHA badge
+      const id = window.grecaptcha.render('recaptcha-container', {
+        'sitekey': '6LdXuoArAAAAAGFWidrp3Rw3jppYh-DsxcaTCTBd', // <<< IMPORTANT: REPLACE WITH YOUR ACTUAL SITE KEY
+        'size': 'invisible',
+        'badge': 'bottomright' // This is the default, but explicitly setting it can help
+      });
+      setRecaptchaId(id);
+    } else {
+      // Fallback if grecaptcha isn't immediately available (e.g., script still loading)
+      // You might want a more robust loading indicator or error handling here
+      console.warn("grecaptcha not available, re-attempting or delaying rendering.");
+      // A simple retry (consider throttling in a real app)
+      const interval = setInterval(() => {
+        if (typeof window.grecaptcha !== 'undefined' && typeof window.grecaptcha.render === 'function') {
+          clearInterval(interval);
+          const id = window.grecaptcha.render('recaptcha-container', {
+            'sitekey': '6LdXuoArAAAAAGFWidrp3Rw3jppYh-DsxcaTCTBd', // <<< IMPORTANT: REPLACE WITH YOUR ACTUAL SITE KEY
+            'size': 'invisible',
+            'badge': 'bottomright'
+          });
+          setRecaptchaId(id);
+        }
+      }, 500); // Check every 500ms
+    }
+  }, []); // Empty dependency array means this runs once on mount
+
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault(); // Prevent default form submission
+
+    if (recaptchaId === null) {
+      console.error("reCAPTCHA not loaded yet.");
+      alert("Please wait for reCAPTCHA to load before submitting.");
+      return;
+    }
+
+    try {
+      // Execute reCAPTCHA to get a token
+      const token = await window.grecaptcha.execute(recaptchaId, { action: 'submit_contact_form' });
+
+      // Get form data
+      const form = event.currentTarget;
+      const formData = new FormData(form);
+
+      // Append reCAPTCHA token to form data
+      formData.append('g-recaptcha-response', token);
+
+      // You also need to append the hidden form-name for Netlify's processing
+      formData.append('form-name', 'contact');
+
+      // Submit the form to Netlify
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString()
+      });
+
+      if (response.ok) {
+        alert('Form submitted successfully!');
+        form.reset(); // Clear the form
+        // You might want to redirect to your success page here instead
+        // window.location.href = '/success/';
+      } else {
+        alert('Form submission failed.');
+        console.error('Form submission error:', response.statusText);
+      }
+
+    } catch (error) {
+      console.error('reCAPTCHA or form submission error:', error);
+      alert('An error occurred during submission. Please try again.');
+    } finally {
+      // Reset reCAPTCHA after submission attempt (optional, but good practice)
+      if (typeof window.grecaptcha !== 'undefined' && typeof window.grecaptcha.reset === 'function') {
+         window.grecaptcha.reset(recaptchaId);
+      }
+    }
+  };
+
+  // ... rest of your component's return statement ...
+  
+  
   return (
     <section id="contact" className="py-2 px-4">
       <div className="max-w-4xl mx-auto">
@@ -17,7 +103,7 @@ const ContactSection: React.FC = () => {
         </div>
 
         <div className="glass-card p-8 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
-          <form name="contact" data-netlify="true" data-netlify-recaptcha="true" className="space-y-6"> 
+          <form name="contact" data-netlify="true" className="space-y-6" onSubmit={handleSubmit}> 
             <input type="hidden" name="form-name" value="contact" />
           {/* NEW FORM FIELDS START HERE */}
             <div className="grid md:grid-cols-2 gap-6"><div>
@@ -162,9 +248,11 @@ const ContactSection: React.FC = () => {
 
            
             {/* NEW FORM FIELDS END HERE */}
-            <button type="submit" className="neu-button w-full text-lg py-4">
-              Get Started Today
-            </button>
+            <div id="recaptcha-container"></div> {/* ADD THIS LINE */}
+            <button type="submit" className="neu-button w-full text-lg py-4">
+              Get Started Today
+            </button>
+           
           </form>
         </div>
       </div>
