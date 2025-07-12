@@ -146,7 +146,7 @@ const ContactSection: React.FC = () => {
                 <option value="other-marketing">Other</option>
               </select>
             </div>
-
+          
             {/* Message box */}
             <div>
               <label htmlFor="message" className="block text-sm font-medium mb-2">Your Message</label>
@@ -159,9 +159,7 @@ const ContactSection: React.FC = () => {
               </textarea>
             </div>
 
-            {/* CAPTCHA (Netlify reCAPTCHA) */}
-            <div data-netlify-recaptcha="true" className="mt-4"></div>
-
+           
             {/* NEW FORM FIELDS END HERE */}
             <button type="submit" className="neu-button w-full text-lg py-4">
               Get Started Today
