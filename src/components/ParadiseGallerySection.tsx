@@ -16,10 +16,7 @@ const ParadiseGallerySection: React.FC = () => {
     '/lovable-uploads/6bcb673c-de07-4891-9269-666d3033b94f.png',
     '/lovable-uploads/dfea186a-c804-4729-b7b8-b620b3e6550f.png',
     '/lovable-uploads/27901c6d-a934-433a-b001-84c373d1ea27.png',
-    '/lovable-uploads/beachAccess.png',
-    '/lovable-uploads/beachFront3.png',
-    '/lovable-uploads/Manza.png',
-    '/lovable-uploads/FloorPanWpool.png'
+    
   ];
 
   return (
