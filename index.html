@@ -79,7 +79,7 @@
   </head>
 
   <body>
-  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+  <form name="contact" method="POST" action="/success/" data-netlify="true" data-netlify-recaptcha="true" hidden>
     <input type="text" name="first-name" />
     <input type="text" name="last-name" />
     <input type="email" name="email" />
