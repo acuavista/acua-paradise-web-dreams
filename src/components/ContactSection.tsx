@@ -60,7 +60,7 @@ const ContactSection: React.FC = () => {
       formData.append('form-name', 'contact');
 
       // Submit the form to Netlify
-      const response = await fetch('/', {
+      const response = await fetch(form.action, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(formData as any).toString()
