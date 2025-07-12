@@ -1,14 +1,17 @@
 // This is a dummy change to force a new Netlify deploy and re-detection.
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 // ... rest of your code ...
 
 
 const ContactSection: React.FC = () => {
+  const formRef = useRef<HTMLFormElement>(null);
   const [recaptchaId, setRecaptchaId] = useState<string | number | null>(null); 
 
-  useEffect(() => {
     // Ensure grecaptcha is available
-    if (typeof window.grecaptcha !== 'undefined' && typeof window.grecaptcha.render === 'function') {
+    
+useEffect(() => {
+    // Ensure grecaptcha is available
+    if (typeof window.grecaptcha !== 'undefined' && typeof window.grecaptcha.render === 'function') {
       // Render the invisible reCAPTCHA badge
       const id = window.grecaptcha.render('recaptcha-container', {
         'sitekey': '6LdXuoArAAAAAGFWidrp3Rw3jppYh-DsxcaTCTBd', // <<< IMPORTANT: REPLACE WITH YOUR ACTUAL SITE KEY
@@ -50,8 +53,11 @@ const ContactSection: React.FC = () => {
       const token = await window.grecaptcha.execute(recaptchaId, { action: 'submit_contact_form' });
 
       // Get form data
-      const form = event.currentTarget;
-      const formData = new FormData(form);
+       if (!formRef.current) {
+        alert("Form element not found. Please try again.");
+        return;
+      }
+      const formData = new FormData(formRef.current);
 
       // Append reCAPTCHA token to form data
       formData.append('g-recaptcha-response', token);
@@ -60,7 +66,7 @@ const ContactSection: React.FC = () => {
       formData.append('form-name', 'contact');
 
       // Submit the form to Netlify
-      const response = await fetch(form.action, {
+      const response = await fetch(formRef.current.action,  {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(formData as any).toString()
@@ -68,7 +74,7 @@ const ContactSection: React.FC = () => {
 
       if (response.ok) {
         alert('Form submitted successfully!');
-        form.reset(); // Clear the form
+        formRef.current.reset();
         // You might want to redirect to your success page here instead
         // window.location.href = '/success/';
       } else {
@@ -103,7 +109,7 @@ const ContactSection: React.FC = () => {
         </div>
 
         <div className="glass-card p-8 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000">
-          <form name="contact" data-netlify="true" className="space-y-6" onSubmit={handleSubmit}> 
+          <form name="contact" data-netlify="true" className="space-y-6" onSubmit={handleSubmit} ref={formRef}>
             <input type="hidden" name="form-name" value="contact" />
           {/* NEW FORM FIELDS START HERE */}
             <div className="grid md:grid-cols-2 gap-6"><div>
