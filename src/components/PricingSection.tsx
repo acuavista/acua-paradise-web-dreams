@@ -20,8 +20,8 @@ const PricingSection: React.FC = () => {
             <div className="glass-card p-6 h-full">
               <h3 className="text-xl font-medium mb-2">Premium Beachfront Lot</h3>
               <div className="mb-4">
-                <span className="text-3xl font-medium">$200,000</span>
-                <span className="text-white/60 ml-2">$100/sf</span>
+                <span className="text-3xl font-medium">$00000</span>
+                <span className="text-white/60 ml-2">$00/sf</span>
               </div>
               <p className="text-white/80 mb-6">Direct ocean access, unparalleled views. The pinnacle of Caribbean luxury.</p>
               <ul className="space-y-2 mb-6">
@@ -52,8 +52,8 @@ const PricingSection: React.FC = () => {
             <div className="glass-card p-6 h-full border-2 border-yellow-400/30">
               <h3 className="text-xl font-medium mb-2">Beach Access Lot</h3>
               <div className="mb-4">
-                <span className="text-3xl font-medium">$140,000</span>
-                <span className="text-white/60 ml-2">$70/sf</span>
+                <span className="text-3xl font-medium">$0,000</span>
+                <span className="text-white/60 ml-2">$0/sf</span>
               </div>
               <p className="text-white/80 mb-6">Short, easy walk to pristine beaches. The perfect blend of luxury, convenience, and value.</p>
               <ul className="space-y-2 mb-6">
@@ -83,8 +83,8 @@ const PricingSection: React.FC = () => {
             <div className="glass-card p-6 h-full">
               <h3 className="text-xl font-medium mb-2">Tropical Paradise Lot</h3>
               <div className="mb-4">
-                <span className="text-3xl font-medium">$55,000</span>
-                <span className="text-white/60 ml-2">$27.5/sf</span>
+                <span className="text-3xl font-medium">$0,000</span>
+                <span className="text-white/60 ml-2">$0/sf</span>
               </div>
               <p className="text-white/80 mb-6">Secluded, lush, and serene inland properties. Embrace nature's tranquility.</p>
               <ul className="space-y-2 mb-6">
